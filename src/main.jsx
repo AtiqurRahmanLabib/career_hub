@@ -6,6 +6,7 @@ import ErrorPage from './Components/error-page/error-page';
 import Statistics from './Components/Statistics/Statistics';
 import AppliedJobs from './Components/Applied-Jobs/AppliedJobs';
 import { createBrowserRouter, RouterProvider, } from "react-router-dom";
+import Blogs from './Components/Blogs/Blogs';
 
 
 const router = createBrowserRouter([
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       },
       {
         path: "/appliedJobs", element: <AppliedJobs></AppliedJobs>,
+      },
+      {
+        path: "/blogs/:id", element: <Blogs></Blogs>,
+        loader: () => fetch('../../../public/data/jobs.json')
       },
     ]
   },
