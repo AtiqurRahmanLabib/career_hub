@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types';
-const JobCetegory = ({ categorie }) => {
-    const { logo, category_name, availability } = categorie;
-    console.log(categorie);
+const JobCetegory = ({ logo, category_name, availability }) => {
     return (
         <div className="">
             <div className="items-center w-[311px] h-[243px] bg-[#F7F7F7] rounded-[8px] mt-5 pl-8 pt-5">
@@ -18,7 +16,7 @@ const JobCetegory = ({ categorie }) => {
     );
 };
 JobCetegory.propTypes = {
-    category: PropTypes.shape({
+    categorie: PropTypes.shape({
         logo: PropTypes.string.isRequired,
         category_name: PropTypes.string.isRequired,
         availability: PropTypes.string.isRequired,

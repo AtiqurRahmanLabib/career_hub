@@ -20,6 +20,9 @@ const JobCategoryList = () => {
                 categories.map(categorie => <JobCetegory
                     key={categorie.id}
                     categorie={categorie}
+                    log={categorie.logo}
+                    category_name={categorie.category_name}
+                     availability={categorie.availability}
 
                 ></JobCetegory>)
             }
