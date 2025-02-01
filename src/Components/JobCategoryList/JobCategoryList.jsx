@@ -7,7 +7,8 @@ const JobCategoryList = () => {
     useEffect(() => {
         fetch('../../../public/data/categories.json')
             .then((response) => response.json())
-            .then((data) => setCategories(data));
+            .then((data) => setCategories(data))
+            .catch((error) => console.error("Error fetching data:", error));
     }, []);
 
     return (

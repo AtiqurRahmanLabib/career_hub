@@ -1,0 +1,21 @@
+/* Normal NavLink Style */
+.inactive-link {
+    color: gray;
+    text-decoration: none;
+}
+
+.inactive-link:hover {
+    color: blue;
+}
+
+/* Active NavLink Style */
+.active-link {
+     /* This is for when the link is active */
+    font-weight: bold;
+    background-color: #f4f4f4;
+}
+
+/* Hover effect */
+.inactive-link:hover {
+    color: black; /* Change color when hovered */
+}

@@ -3,9 +3,9 @@
 const Footer = () => {
     return (
         <div>
-            <footer className="bg-gray-900 text-white py-10">
-                <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <div>
+            <footer className="bg-[#1A1919] text-white py-10">
+                <div className="container mx-auto w-[1400px] px-[60px] grid grid-cols-1 md:grid-cols-5 gap-8">
+                    <div className="">
                         <h2 className="text-xl font-bold">CareerHub</h2>
                         <p className="text-gray-400 mt-2">There are many variations of passages of Lorem Ipsum, but the majority have suffered alteration in some form.</p>
                         <div className="flex space-x-3 mt-4">
@@ -44,9 +44,17 @@ const Footer = () => {
                             <li><a href="#">Developers</a></li>
                         </ul>
                     </div>
+                    <div className="">
+                        <h1>Contact</h1>
+                        <p>524 Broadway , NYC</p>
+                        <p>+1 777 - 978 - 5570</p>
+                        <div className="">
+
+                        </div>
+                    </div>
                 </div>
 
-                <div className="mt-10 text-center text-gray-500 border-t border-gray-700 pt-4">
+                <div className="mt-10 text-center text-gray-500 border-t border-gray-700 pt-4 flex justify-between w-[1300px] mx-auto">
                     <p>&copy; 2023 CareerHub. All Rights Reserved</p>
                     <p>Powered by <span className="text-white font-semibold">CareerHub</span></p>
                 </div>

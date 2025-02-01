@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import './Header.css';
 
 const Header = () => {
     return (
@@ -9,15 +10,38 @@ const Header = () => {
                     <div className="flex space-x-4 text-[16px] font-medium">
                         <NavLink
                             to="/"
-                            className="h-[35px] w-[100px] flex items-center justify-center hover:bg-gray-200 rounded-[8px]">
+                            className={({ isActive }) =>
+                                isActive
+                                    ? 'h-[35px] w-[100px] flex items-center justify-center hover:bg-gray-200 rounded-[8px] active-link'
+                                    : 'h-[35px] w-[100px] flex items-center justify-center hover:bg-gray-200 rounded-[8px] inactive-link'
+                            }
+                        >
                             <span className="bg-gradient-to-r from-[#7E90FE] to-[#9873FF] bg-clip-text text-transparent text-center">
                                 Statistics
                             </span>
                         </NavLink>
-                        <NavLink to="/appliedJobs" className="h-[35px] w-[100px]  text-center flex items-center justify-center hover:bg-gray-200 rounded-[8px]">Applied Jobs</NavLink>
-                        <NavLink to="/blogs"className="h-[35px] w-[100px] text-center flex items-center justify-center hover:bg-gray-200 rounded-[8px]">Blog</NavLink>
+                        <NavLink
+                            to="/appliedJobs"
+                            className={({ isActive }) =>
+                                isActive
+                                    ? 'h-[35px] w-[100px] text-center flex items-center justify-center hover:bg-gray-200 rounded-[8px] active-link'
+                                    : 'h-[35px] w-[100px] text-center flex items-center justify-center hover:bg-gray-200 rounded-[8px] inactive-link'
+                            }
+                        >
+                            Applied Jobs
+                        </NavLink>
+                        <NavLink
+                            to="/blogs"
+                            className={({ isActive }) =>
+                                isActive
+                                    ? 'h-[35px] w-[100px] text-center flex items-center justify-center hover:bg-gray-200 rounded-[8px] active-link'
+                                    : 'h-[35px] w-[100px] text-center flex items-center justify-center hover:bg-gray-200 rounded-[8px] inactive-link'
+                            }
+                        >
+                            Blog
+                        </NavLink>
                     </div>
-                    <button className="w-[190px] h-[65px] rounded-[8px] text-[#FFFFFF] font-extrabold text-[20px] bg-gradient-to-r from-[#7E90FE] to-[#9873FF]" type="button">Star Applying</button>
+                    <button className="w-[190px] h-[65px] rounded-[8px] text-[#FFFFFF] font-extrabold text-[20px] bg-gradient-to-r from-[#7E90FE] to-[#9873FF]" type="button">Start Applying</button>
                 </div>
             </nav>
         </div>
